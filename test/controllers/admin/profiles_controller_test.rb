@@ -1,23 +1,23 @@
 require "test_helper"
 
-class Admin::ProfileControllerTest < ActionDispatch::IntegrationTest
+class Admin::ProfilesControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
-    get admin_profile_index_url
+    get admin_profiles_index_url
     assert_response :success
   end
 
   test "should get show" do
-    get admin_profile_show_url
+    get admin_profiles_show_url
     assert_response :success
   end
 
   test "should get edit" do
-    get admin_profile_edit_url
+    get admin_profiles_edit_url
     assert_response :success
   end
 
   test "should get new" do
-    get admin_profile_new_url
+    get admin_profiles_new_url
     assert_response :success
   end
 end

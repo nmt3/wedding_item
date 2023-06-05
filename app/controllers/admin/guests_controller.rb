@@ -1,4 +1,4 @@
-class Public::ProfileController < ApplicationController
+class Admin::GuestsController < ApplicationController
   def index
   end
 

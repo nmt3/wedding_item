@@ -1,2 +1,4 @@
 class Invitation < ApplicationRecord
+  
+  
 end

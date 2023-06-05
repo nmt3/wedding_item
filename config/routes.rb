@@ -1,16 +1,28 @@
 Rails.application.routes.draw do
 
   namespace :admin do
-    get 'profile/index'
-    get 'profile/show'
-    get 'profile/edit'
-    get 'profile/new'
+    get 'profiles/index'
+    get 'profiles/show'
+    get 'profiles/edit'
+    get 'profiles/new'
   end
   namespace :public do
-    get 'profile/index'
-    get 'profile/show'
-    get 'profile/edit'
-    get 'profile/new'
+    get 'profiles/index'
+    get 'profiles/show'
+    get 'profiles/edit'
+    get 'profiles/new'
+  end
+  namespace :admin do
+    get 'guests/index'
+    get 'guests/show'
+    get 'guests/edit'
+    get 'guests/new'
+  end
+  namespace :public do
+    get 'guests/index'
+    get 'guests/show'
+    get 'guests/edit'
+    get 'guests/new'
   end
   namespace :public do
     get 'menus/index'
