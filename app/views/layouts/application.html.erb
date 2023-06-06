@@ -13,11 +13,33 @@
   <body>
     <header>
       <% if customer_signed_in? %>
-      <li>
-        <%= link_to "HOME", root_path %>
-      </li>
+        <li>
+          <%= link_to "HOME", root_path %>
+        </li>
+        <li>
+          <%= link_to "席次表", tables_path %>
+        </li>
+        <li>
+          <%= link_to "メニュー表", menus_path %>
+        </li>
+        <li>
+          <%= link_to "プロフィール表", profiles_path %>
+        </li>
+        <li>
+          <%= link_to "ゲスト管理", guests_path %>
+        </li>
         <li>
           <%= link_to "ログアウト", destroy_customer_session_path, method: :delete %>
+        </li>
+      <% elsif admin_signed_in? %>
+        <li>
+          <%= link_to "HOME", admin_path, class: "nav-link text-light" %>
+        </li>
+        <li>
+          <%= link_to "HOME", admin_customers_path, class: "nav-link text-light" %>
+        </li>
+        <li>
+          <%= link_to "ログアウト", destroy_admin_session_path, method: :delete, class: "nav-link text-light" %>
         </li>
       <% else %>
         <li>

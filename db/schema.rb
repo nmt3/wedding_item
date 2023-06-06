@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_05_28_210035) do
+ActiveRecord::Schema.define(version: 2023_06_05_234711) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -37,6 +37,43 @@ ActiveRecord::Schema.define(version: 2023_05_28_210035) do
     t.boolean "is_deleted"
     t.index ["email"], name: "index_customers_on_email", unique: true
     t.index ["reset_password_token"], name: "index_customers_on_reset_password_token", unique: true
+  end
+
+  create_table "guests", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "first_name_kana"
+    t.string "last_name_kana"
+    t.string "relationship"
+    t.string "title"
+    t.string "post_code"
+    t.string "address"
+    t.string "phone_number"
+    t.string "mail"
+    t.string "attendance"
+    t.string "allergy"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "invitations", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "menus", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "profiles", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "tables", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end
