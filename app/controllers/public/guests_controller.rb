@@ -4,9 +4,11 @@ class Public::GuestsController < ApplicationController
   end
 
   def index
+    @guests = Guest.all
   end
 
   def show
+    @guest = Guest.find(params[:id])
   end
 
   def edit
@@ -26,7 +28,10 @@ class Public::GuestsController < ApplicationController
   end
 
   private
-
-
+    def guest_params
+      params.require(:guest).permit(:first_name, :last_name, :first_name_kana,
+      :last_name_kana, :relationship, :title, :post_code, :address,
+      :phone_number, :mail, :attendance, :allergy)
+    end
 
 end
