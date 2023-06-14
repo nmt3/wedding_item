@@ -4,12 +4,39 @@
 <%= form_with model: @guest, url: guests_path do |f| %>
   <%= f.label :姓 %>
   <%= f.text_field :first_name %>
+
   <%= f.label :名 %>
   <%= f.text_field :last_name %>
+
   <%= f.label :セイ %>
   <%= f.text_field :first_name_kana %>
+
   <%= f.label :メイ %>
   <%= f.text_field :last_name_kana %>
+
+  <%= f.label :間柄 %>
+  <%= f.text_field :relationship %>
+
+  <%= f.label :肩書き %>
+  <%= f.text_field :title %>
+
+  <%= f.label :郵便番号 %>
+  <%= f.text_field :post_code %>
+
+  <%= f.label :住所 %>
+  <%= f.text_field :address %>
+
+  <%= f.label :電話番号 %>
+  <%= f.text_field :phone_number %>
+
+  <%= f.label :メールアドレス %>
+  <%= f.text_field :mail %>
+
+  <%= f.label :出欠席 %>
+  <%= f.text_field :attendance %>
+
+  <%= f.label :アレルギー %>
+  <%= f.text_field :allergy %>
 
   <%= f.submit "保存" %>
 <% end %>
