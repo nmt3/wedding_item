@@ -1,4 +1,8 @@
 class Public::GuestsController < ApplicationController
+  def new
+    @guest = Guest.new
+  end
+
   def index
   end
 
@@ -8,6 +12,21 @@ class Public::GuestsController < ApplicationController
   def edit
   end
 
-  def new
+  def create
+    @guest = Guest.new(guest_params)
+    @guest.save
+    redirect_to guests_path
   end
+
+  def update
+
+  end
+
+  def destroy
+  end
+
+  private
+
+
+
 end

@@ -33,13 +33,13 @@
         </li>
       <% elsif admin_signed_in? %>
         <li>
-          <%= link_to "HOME", admin_path, class: "nav-link text-light" %>
+          <%= link_to "HOME", admin_path %>
         </li>
         <li>
-          <%= link_to "HOME", admin_customers_path, class: "nav-link text-light" %>
+          <%= link_to "HOME", admin_customers_path %>
         </li>
         <li>
-          <%= link_to "ログアウト", destroy_admin_session_path, method: :delete, class: "nav-link text-light" %>
+          <%= link_to "ログアウト", destroy_admin_session_path, method: :delete %>
         </li>
       <% else %>
         <li>

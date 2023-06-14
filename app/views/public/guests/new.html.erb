@@ -1,2 +1,15 @@
 <h1>Public::Guests#new</h1>
 <p>Find me in app/views/public/guests/new.html.erb</p>
+
+<%= form_with model: @guest, url: guests_path do |f| %>
+  <%= f.label :姓 %>
+  <%= f.text_field :first_name %>
+  <%= f.label :名 %>
+  <%= f.text_field :last_name %>
+  <%= f.label :セイ %>
+  <%= f.text_field :first_name_kana %>
+  <%= f.label :メイ %>
+  <%= f.text_field :last_name_kana %>
+
+  <%= f.submit "保存" %>
+<% end %>
